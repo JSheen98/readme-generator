@@ -1,14 +1,14 @@
 const inquirer = require('inquirer')
 const fs = require('fs')
-const newArr = []
+const generateMarkdown = require('./assets/modules/generateMarkdown.js')
 
 function prompt() {
     return inquirer
         .prompt([
             {
                 type: 'input',
-                message: 'What is the name of the project?',
-                name: 'name',
+                message: 'What is the title of this project?',
+                name: 'title',
                 validate: function (input) {
                     if (input === '') {
                         console.log(`\x1b[31mPlease enter a valid project name\x1b[0m`)
@@ -19,7 +19,7 @@ function prompt() {
             },
             {
                 type: 'input',
-                message: "What is the description for you project?",
+                message: "What is the description for this project?",
                 name: "description",
                 validate: function (input) {
                     if (input === '') {
@@ -43,7 +43,7 @@ function prompt() {
             },
             {
                 type: 'input',
-                message: "What is the usage info for the project?",
+                message: "What is the usage info for this project?",
                 name: "usage",
                 validate: function (input) {
                     if (input === '') {
@@ -55,7 +55,7 @@ function prompt() {
             },
             {
                 type: 'input',
-                message: "Are you allowing contributions to the project, and if so, what are the requirements?",
+                message: "If applicable, what are the contribution requirements?",
                 name: "contributions",
                 validate: function (input) {
                     if (input === '') {
@@ -79,11 +79,23 @@ function prompt() {
             },
             {
                 type: 'input',
-                message: "What is your GitHub username (Warning: this is CASE Sensitive)?",
-                name: "questions",
+                message: "What is your GitHub username (Warning: this is CASE Sensitive, please enter it correctly)?",
+                name: "github",
                 validate: function (input) {
                     if (input === '') {
                         console.log(`\x1b[31mPlease enter your GitHub username\x1b[0m`)
+                        return 
+                    }
+                    return true
+                }
+            },
+            {
+                type: 'input',
+                message: "What is your email address?",
+                name: "email",
+                validate: function (input) {
+                    if (input === '') {
+                        console.log(`\x1b[31mPlease enter your email address\x1b[0m`)
                         return 
                     }
                     return true
@@ -96,7 +108,9 @@ function prompt() {
                 choices: ['MIT', 'Apache License 2.0', 'Mozilla Public License 2.0']
             }
         ]).then((data) => {
-            console.log(data)
+            console.log(data.license)
+            fs.writeFile('README.md', generateMarkdown(data), (err) => { err ? console.error(err) : console.log('Success!') })
+
         })
 }
 
