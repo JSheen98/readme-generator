@@ -5,39 +5,40 @@ function generateMarkdown(data) {
 
 ## Table of Contents:
 
+* [Description](#description)
 * [Installation](#installation)
 * [Usage](#usage)
 * [Contributions](#contributions)
-* [Testing Procedures](#'testing procedures')
+* [Testing Procedures](#testing-procedures)
 * [Questions](#questions)
 
 
-## ✏️ Description: 
+## ✏️ Description: <a name="description"></a> 
 
 ${data.description}
 
 
-## ⚙️ Installation:
+## ⚙️ Installation: <a name="installation"></a>
 
 ${data.installation}
 
 
-## ✍️ Usage:
+## ✍️ Usage: <a name="usage"></a>
 
 ${data.usage}
 
 
-## 👥 Contributions:
+## 👥 Contributions: <a name="contributions"></a>
 
 ${data.contributions}
 
 
-## 🧪 Testing Procedures:
+## 🧪 Testing Procedures: <a name="testing-procedures"></a>
 
 ${data.test}
 
-## ❔ Questions
 
+## ❔ Questions: <a name="questions"></a>
 
 If you have questions, feel free to reach me at my email: <br>
 ${data.email}
