@@ -1,7 +1,9 @@
+// Creates inquirer, fs, and the internal created generated md file
 const inquirer = require('inquirer')
 const fs = require('fs')
 const generateMarkdown = require('./assets/modules/generateMarkdown.js')
 
+// Function that prompts users within the console
 function prompt() {
     return inquirer
         .prompt([
@@ -9,6 +11,7 @@ function prompt() {
                 type: 'input',
                 message: 'What is the title of this project?',
                 name: 'title',
+                // example of validation, if user doesn't input any text, it will put a note saying user must make a selection
                 validate: function (input) {
                     if (input === '') {
                         console.log(`\x1b[31mPlease enter a valid project name\x1b[0m`)
@@ -103,18 +106,19 @@ function prompt() {
             },
             {
                 type: 'list',
-                message: "What type of license is this project using?",
+                message: "What type of license is this project using? (NOTE: Common licenses are included, others licenses may have to be manually input)",
                 name: "license",
-                choices: ['MIT', 'Apache License 2.0', 'Mozilla Public License 2.0']
+                choices: ['MIT', 'Apache License 2.0', 'Mozilla Public License 2.0', '3-Clause BSD License', '2-Clause BSD License', 'GNU General Public License v3',
+                'GNU LGPL v3', 'Eclipse Public License v2.0', 'Unlicensed', 'Manual Input']
             }
-        ]).then((data) => {
-            console.log(data.license)
+        ]).then((data) => { 
+            // Calls file system writeFile function, and creates a readme (type markdown)  file, and calls generateMarkdown function from generateMarkdown module
             fs.writeFile('README.md', generateMarkdown(data), (err) => { err ? console.error(err) : console.log('Success!') })
 
         })
 }
 
-
+// Prompt function call
 prompt()
 
 
