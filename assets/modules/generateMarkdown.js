@@ -1,16 +1,15 @@
 // Function that actually generates the markdown based of of user input from index.js inquirer
 function generateMarkdown(data) {
 return `# ${data.title}
-## License:
 
-${generateLicense(data.license)}
 
-${generateLicenseDescription(data.license)}
+## ✏️ Description:
+
+${data.description}
 
 
 ## Table of Contents:
 
-* [Description](#description)
 * [Installation](#installation)
 * [Usage](#usage)
 * [Contributions](#contributions)
@@ -18,9 +17,11 @@ ${generateLicenseDescription(data.license)}
 * [Questions](#questions)
 
 
-## ✏️ Description: <a name="description"></a> 
+## License:
 
-${data.description}
+${generateLicense(data.license)}
+
+${generateLicenseDescription(data.license)}
 
 
 ## ⚙️ Installation: <a name="installation"></a>
@@ -33,7 +34,7 @@ ${data.installation}
 ${data.usage}
 
 
-## 👥 Contributions: <a name="contributions"></a>
+## 👥 Contribution Guidelines: <a name="contributions"></a>
 
 ${data.contributions}
 
@@ -83,25 +84,25 @@ function generateLicense(data) {
 function generateLicenseDescription(data) {
     switch (data) {
         case 'MIT':
-            return 'Description: MIT test';
+            return 'This project is licensed under the MIT License. See LICENSE in the repo for more information.';
         case 'Apache License 2.0':
-            return 'Description: Apache Test';
+            return 'This project is licensed under the Apache License 2.0. See LICENSE in the repo for more information.';
         case 'Mozilla Public License 2.0':
-            return 'Description: Mozilla Test'
+            return 'This project is licensed under the Mozilla Public License 2.0. See LICENSE in the repo for more information.'
         case '3-Clause BSD License':
-            return 'Description: 3-Clause BSD License Test'
+            return 'This project is licensed under the 3-Clause BSD License. See LICENSE in the repo for more information.'
         case '2-Clause BSD License':
-            return 'Description: 2-Clause BSD License Test'
+            return 'This project is licensed under the 2-Clause BSD License. See LICENSE in the repo for more information.'
         case 'GNU General Public License v3':
-            return 'Description: GNU General Public License v3 Test'
+            return 'This project is licensed under the GNU General Public License v3. See LICENSE in the repo for more information.'
         case 'GNU LGPL v3':
-            return 'Description: GNU LGPL v3 Test'
+            return 'This project is licensed under the GNU LGPL v3. See LICENSE in the repo for more information.'
         case 'Eclipse Public License v2.0':
-            return 'Description: Eclipse Public License v2.0 Test'
+            return 'This project is licensed under the Eclipse Public License v2.0. See LICENSE in the repo for more information.'
         case 'Manual Input':
             return ''
         default:
-            return 'Description: n/a';
+            return 'This project is not currently licensed.';
     }
 }
 

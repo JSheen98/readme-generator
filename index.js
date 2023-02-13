@@ -14,6 +14,7 @@ function prompt() {
                 // example of validation, if user doesn't input any text, it will put a note saying user must make a selection
                 validate: function (input) {
                     if (input === '') {
+                        // Logs the mistake, the code around the message makes it display in red
                         console.log(`\x1b[31mPlease enter a valid project name\x1b[0m`)
                         return 
                     }
@@ -113,7 +114,7 @@ function prompt() {
             }
         ]).then((data) => { 
             // Calls file system writeFile function, and creates a readme (type markdown)  file, and calls generateMarkdown function from generateMarkdown module
-            fs.writeFile('README.md', generateMarkdown(data), (err) => { err ? console.error(err) : console.log('Success!') })
+            fs.writeFile('READMEsample.md', generateMarkdown(data), (err) => { err ? console.error(err) : console.log('Success!') })
 
         })
 }
