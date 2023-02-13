@@ -1,51 +1,82 @@
-# jf;laejkf
-## License:
+# README Generator
 
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-Description: GNU General Public License v3 Test
+## ✏️ Description:
+
+The point of this project is to give developers an easy, quick, and user friendly way to create readme files from scratch. The developer (or other user), will open an integrated terminal, and run Node on the index.js file. They will then be met with questions from npm inquirer. The questions will be be about the project in general, and these responses will be gathered and used in the actual generation of the readme file. Once complete, the readme file will generate and be put in the project, in the same file that the index.js is located. At this point, it is suggested that the user goes through and proofreads the file, and makes sure everything looks as expected. Once that is done, then the readme should be good to go, and the user can focus on more important areas of the code!
 
 
 ## Table of Contents:
 
-* [Description](#description)
+* [Technologies Used](#technology)
 * [Installation](#installation)
 * [Usage](#usage)
-* [Contributions](#contributions)
+* [Contribution Guidelines](#contributions)
 * [Testing Procedures](#testing-procedures)
-* [Questions](#questions)
 
 
-## ✏️ Description: <a name="description"></a> 
+## 📜 License:
 
-Jf;leajf;lkjea;lfjk;ledajf;ljeas;fj;lkaesjf;laejs;flkj;alsejf;lkajs;ledfj;lkaesjf;lkjaes;lefj;lajseflkj;lf j;eja lf ;easjf ;l ej ;lfj e;als jf;lk esa;lk fj alesj;fl ja;se lf  faelkfj; lakejs f;lkj as;lejf;l asjZE:flk j;alsej f;laes;lfk ja;eslkfj lajesf;l j;aslekjf ;leakjf; lkjae;l kfj ;lkaesjf;l ja;lje ;ljaf ;lekjf;laesj flkaje;lk j;lfaj;lkje f;lkejal fjl;eas f;lajel; kj;lak je;lkfj lakejf; lkajs;el fj;lakjef lkej;fl ja;lkj e;ljf a;lksje f;lkajse
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+This project is licensed under the MIT License. See LICENSE in the repo for more information.
+
+
+## User Story
+
+* AS A developer
+* I WANT a README generator
+* SO THAT I can quilckly create a professional README for a new project
+
+
+## Acceptance Criteria
+
+* GIVEN a command-line application that accepts user input
+* WHEN I prompted for information about my application repository
+* THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
+* WHEN I enter my project title
+* THEN this is displayed as the title of the README
+* WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
+* THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests
+* WHEN I choose a license for my application from a list of options
+* THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
+* WHEN I enter my GitHub username
+* THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
+* WHEN I enter my email address
+* THEN this is added to the section of the README entitled Questions, with insturctions on how to reach me with additional questions
+* WHEN I click on links in the Table of Contents
+* THEN I am taken to the corresponding section of the README
+
+
+## 🖥️ Technologies Used <a name="technology"></a>
+
+* Node.js (npm inquirer, file system)
+* JavaScript
 
 
 ## ⚙️ Installation: <a name="installation"></a>
 
-jef;laj e;lkjfa;l jelk jaf;l je;lkfj ;la je;lfj ;lasejfj laesjf; lje;flha;klefhuieahrfiouhawli fjhqiauhfgekjdazndv;jnjharsklj fhljkeS Fjea shfkjhelkjhfdbalekjfvbnk;jas jhed fkjahslek fkh akjhelk halkheslf kjasehflkjeashlkj hkjlashl kejhalk jehlk ahe hakhe lkjha eskjfhlk aslkjeh halk jehlk ah
+N/A
 
 
 ## ✍️ Usage: <a name="usage"></a>
 
-lk;ejasf;l j;lfaj lejh f;lajsl jeas;lkfj ;leasj flkeajs;o' lja;sejf ;alsejf;leajs; easlkjf ;lajsl kejas;ljle;ksaj l;eajks; lkjef;lkkjefal ejfalkje;l lka jle kasj;le asj f;las j eaw;lfj ;aslej ljas;ljk e;lasj;lkeasj ;fle ja;j e;kleajs;lk ejl ;ajl ekj;aj; 
+Right click the index.js file, and 'Open in integrated terminal.' At this point, run the command 'node index.js'. Then, prompts should appear in the console, and the user can go through and fill those out as they please. This information will be used in the generation of the readme.md file.
 
 
-## 👥 Contributions: <a name="contributions"></a>
+## 👥 Contribution Guidelines: <a name="contributions"></a>
 
-j;alejl;f kjaesl kjla sjlke saj ;asej; ljl;aesj f;lasje;lfk jasl;kej;laskjlekajs lekjf lakesj f lajl jal kje;laelf,as ef e asf es f efs f esa g rtseh t derhgb fv afef  eras fe sf eswa f eas f ew f aes fes,mjfn al l;kfjklf kjaj;l kejfa lke jf;lk ajl;kejf; lakj; lkjeasf;lkj el;kja;ljef ;lkaesj ;lja s;lkjef;l jaej kledj f;lkaejf ;lkjeasl;kf je;lkas jl;asjef;lkajs;l ja;eslk j lkajes;lk fjalks ejf;laskej f;lkasj l;kj;easjl
+No contributions are needed at this time. Thank you!
+
+
+## 📸 Assets
+
+The following video contains a sample walkthrough of this project:
 
 
 ## 🧪 Testing Procedures: <a name="testing-procedures"></a>
 
-;lasejf;l kjae;l 
+N/A
 
 
-## ❔ Questions: <a name="questions"></a>
-
-If you have questions, feel free to reach me at my email: <br>
-jsvlax33@gmail.com
-
-My GitHub: <br>
-https://github.com/JSheen98
     
