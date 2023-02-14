@@ -73,6 +73,8 @@ No contributions are needed at this time. Thank you!
 
 The following video contains a sample walkthrough of this project:
 
+https://drive.google.com/file/d/1hASSljivOWALACUaCOuqtWmTd_ztQJxf/view
+
 
 ## 🧪 Testing Procedures: <a name="testing-procedures"></a>
 
